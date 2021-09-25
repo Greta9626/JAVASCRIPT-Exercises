@@ -4,7 +4,7 @@ function memoize(fn) {
   return numero => {/* gli viene passato il valore 10 nel primo caso*/
 
     if (numero in cache){
-      console.log('Il numero ' + numero + ' esiste in cache e ha come risultato')
+      console.log('Il numero ' + numero + ' esiste in cache e ha come risultato');
       return cache[numero];
     }
 

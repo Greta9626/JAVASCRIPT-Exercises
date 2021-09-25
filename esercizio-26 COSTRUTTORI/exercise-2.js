@@ -7,7 +7,7 @@ function Person(firstName, lastName) { /* viene indicato con la lettera maiuscol
 } 
 // -- con il costruttore possiamo creare la clonazione di una struttura di un oggetto e cambiare gli argomenti successivamnete quando ci servirà. --
 
-let john = new Person('John', 'Doe'); //assegnamo una all'oggetto clonato una nuova classe e cambiamo i paramentri
+let john = new Person('John', 'Doe'); //assegnamo all'oggetto clonato una nuova (new) classe e cambiamo i paramentri
 let simon = new Person('Simon', 'Collins');
 
 console.log(john.fullName()); // John Doe

@@ -1,7 +1,7 @@
 function calculateAverageAge(persons) {
   const ageAverage = persons.reduce((average, person) => {
     return average + person.age; 
-  }, 0); 
+  }, 0);  //lo 0 serve a dare un numero di partenza e definire il tipo (numbero string ecc). si poteva fare in qusta riga direttamente /person.length ed evitare quindi la riga 13
   
   /*il metodo -- REDUCE -- serve a ciclare l'Array 
   ha due parametri principali: il primo è il valore di ritorno dell'iterazione precedente, il secondo invece è l'elemento attuale (person1 person2 person3..).

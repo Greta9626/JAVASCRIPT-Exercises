@@ -5,7 +5,8 @@ function uncompletedNotes(notes) {
     /* procedimento: faccio il return per il filter di notes. filtrare, quindi, ogni singola note di notes e restituire il valore se done === false. (entrando su TODOS (che si trova all'interno delle due NOTE) e a sua volta si entra su ogni singolo di TODO di TODOS per capire se il DONE (di ogni todo) è effettivamente false, se almneno uno dei 3 lo è la funzione è true = la condizione viene rispettata e quindi verrà restituto il valore alla funzione) */
 
 
-    /* -- SOME -- verifica se almeno un elemento di un array è true. */
+    /* -- SOME -- verifica se almeno un elemento di un array è true. ritorna un booleano ( se QUALCUNO la rispetta ritorna true)
+    -- EVERY -- controlla se tutti gli elementi rispettano la condizione gli che stiamo dando (se TUTTI la rispettano)*/
   });
 };
 

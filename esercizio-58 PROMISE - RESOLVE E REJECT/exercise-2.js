@@ -31,7 +31,7 @@ function fetchPersonById(id) {
   });
 }
 
-/* -- COSA HO FATTO -- creo una variabile a cui passo il metodo find (ovvero se riesce a trovarmi un valore altrimenti se non lo trova è null) così che passo direttamente il valore all'if (se true o false (cioè null)).
+/* -- COSA HO FATTO -- creo una variabile a cui passo il metodo find (ovvero se riesce a trovarmi un valore, altrimenti se non lo trova è null) così che passo direttamente il valore all'if (se true o false (cioè null)).
 se è true esegue il resolve(fa uscire dalla promise il valore passato che poi verrà preso dal .then),
 altrimenti esegue il reject(che passa al .catch la stringa dell'errore) */
 

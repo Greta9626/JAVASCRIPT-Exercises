@@ -38,3 +38,5 @@ fetchPersonById(2)
 .then((personJson) => JSON.parse(personJson)) //il primo then passa il valore al secondo then (in questo caso passa il parse del json)
 .then((person) => console.log(person)) //console.log dell oggetto della persona senza essere stringato 
 .catch((err) => console.error(err))
+
+

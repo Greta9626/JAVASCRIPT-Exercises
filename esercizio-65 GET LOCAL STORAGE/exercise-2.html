@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">
+        Fetch Post from LocalStorage
+      </button>
+
+      <h2>Post: <span id="post-title"></span></h2>
+    </div>
+  </body>
+</html>
+
+<script>
+  let bottone = document.getElementById('fetch-post');
+  bottone.addEventListener('click', function() {
+    let post = localStorage.getItem('post');
+    let jsonPost = JSON.parse(post);
+    let titolo = document.getElementById('post-title');
+    titolo.textContent = jsonPost.title;
+  })
+
+  /* per prendere il contenuto dal localStorage si usa getItem(key) in questo caso usiamo 'post' perché l'ho salvato con questa chiave.
+  lo trasformo con parse e prendo il bottone post-title per assegnare il title di jsonPost */
+  
+</script>

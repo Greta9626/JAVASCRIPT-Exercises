@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  let firstName = document.getElementById('firstName');
+  console.log(firstName.value);
+
+  /* --PER PRENDERE GLI ELEMENTI:--
+
+1. document.getElementById(): ci torna un solo elemento perché da per scontato che diamo un solo ID univoco ad un solo elemento(si può fare il contrario ma non conviene)
+
+2. document.querySelector(): differisce da querySelectorAll perché restituisce un solo elemento. ci basta mettere gli stessi selettori del css. ('button') = tag (l'equivalente è document.getElementByTagName). (#button) = ID (equivalente a getElementById). (.button) = class
+
+3. document.questySelectorAll(button) e getElementByClassName(.button) = prende tutti gli elementi bottoni e le classi buotton ritornandoli come array, quindi facilmente accessibile con l'indice [0]
+*/
+</script>
+

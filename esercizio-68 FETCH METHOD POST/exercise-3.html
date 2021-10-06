@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" id="todo-title" />
+        </div>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" id="todo-completed" />
+        </div>
+
+        <button type="submit" id="submit-todo">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  function submitForm(event) //quando assegnamo un paramentro solo nella dichiarazione di una funzione gli passiamo direttamente l'evento che stiamo facendo all'interno, ovvero:
+  {
+    event.preventDefault(); //preventDefault serve quando non vogliamo che la corrispondente azione del browser avvenga, vorremmo invece implementare un altro comportamento. (in questo caso il submit non invierà nulla al browser)
+
+    let titolo = document.getElementById('todo-title').value;
+    let completato = document.getElementById('todo-completed').checked; //mi ritorna true se è checkato;
+    let post = { titolo, completato };
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify(post),
+    });
+  }
+
+  document.querySelector('form').addEventListener('submit', submitForm);
+</script>

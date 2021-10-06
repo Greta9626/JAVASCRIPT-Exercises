@@ -1,0 +1,26 @@
+<html>
+
+<body>
+  <div id="container">
+    <ul class="todo-list">
+
+    </ul>
+  </div>
+</body>
+
+</html>
+
+<script>
+  window.addEventListener('DOMContentLoaded'/* quando gli elementi vengono caricati fai -> */, async () => {
+    let fetchTodo = await fetch('https://jsonplaceholder.typicode.com/todos'); /* mi evita i due then */
+    let responseTodo = await fetchTodo.json(); /* fa il parse dell'url (facendolo uscire in oggetto) */
+    let oggettiTodoList = responseTodo.forEach(element => /* ad ogni elemento dell'array gli creo un li assegnando all'interno i title */{
+      let listTag = document.createElement('li');
+      listTag.textContent = element.title;
+
+      let listElement = document.querySelector('.todo-list');
+      listElement.appendChild(listTag);
+      /* seleziono ul e con appenChild aggiunge un tag in coda a un genitore (alla fine, append = appende) */
+    });
+  })
+</script>

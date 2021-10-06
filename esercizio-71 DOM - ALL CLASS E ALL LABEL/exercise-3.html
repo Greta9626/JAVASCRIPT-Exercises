@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario"/>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const allInputs = document.getElementsByClassName('form-input'); // array che contiene i 3 elementi con classe form-input [0: {......value}, 1: {......value}]
+
+  const allLabels = document.querySelectorAll('label'); // array che contiene i 3 elementi con tag label [0: {......innerHTML}, 1: {......innerHTML}]
+
+  let i = 0; //contatore
+
+  for( elem of allInputs ) {
+    console.log(allLabels[i].innerHTML, elem.value);
+    i++;
+  }
+</script>
+
+
+
+<!-- CONSEGNA: Implementare il codice necessario per recuperare il valore di ciascun campo di input e della corrispettiva label associata.
+In console occorrerà stampare il seguente risultato:
+```
+First Name: Mario
+Last Name: Rossi
+Age: 25
+``` -->

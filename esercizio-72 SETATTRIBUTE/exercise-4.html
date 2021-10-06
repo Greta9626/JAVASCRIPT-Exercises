@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario"/>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+const allInputs = document.getElementsByClassName('form-input');
+const allLabels = document.querySelectorAll('label');
+
+let person = {};
+
+let i = 0;
+for (elem of allLabels) {
+  person[elem.innerHTML] = allInputs[i].value;
+  i++;
+}
+
+let form = document.querySelector('form');
+form.setAttribute('data-person', JSON.stringify(person));
+</script>
+
+
+<!-- CONSEGNA: Implementare il codice necessario per recuperare il valore di ciascun campo di input e creare un oggetto `person` contenente le proprietà: `firstName`, `lastName` e `age`. Infine recuperare l'elemento `form` e aggiungere l'attributo `data-person` contenente l'oggetto `person` in formato json. -->

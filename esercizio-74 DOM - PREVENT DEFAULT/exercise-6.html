@@ -1,0 +1,66 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const form = document.querySelector('#person-form')
+
+  function createLabel(textContent) {
+    const label = document.createElement('label');
+    label.textContent = textContent;
+    return label;
+  }
+
+  function createInput(type, id, placeholder) {
+    const input = document.createElement('input');
+    input.style.cssText = "display: block; margin-bottom: 10px";
+    input.type = type;
+    input.id = id;
+    input.placeholder = placeholder;
+    return input;
+  }
+
+  function createDiv(type, id, placeholder, textContent) {
+    const getLabel = createLabel(textContent);
+    const getInput = createInput(type, id, placeholder);
+    const getDiv = document.createElement('div');
+
+    getDiv.appendChild(getLabel);
+    getDiv.appendChild(getInput);
+    form.prepend(getDiv);
+  }
+
+  let initForm = () => {
+    createDiv('number', 'age', '40', 'Age');
+    createDiv('text', 'last-name', 'Busacca', 'Last Name');
+    createDiv('text', 'first-name', 'Mario', 'First Name');
+  }
+
+  function getButton(event) {
+    event.preventDefault();
+    const inputFirstName = document.querySelector('#first-name');
+    const inputLastName = document.querySelector('#last-name');
+    const inputAge = document.querySelector('#age');
+
+    console.log(inputFirstName.value);
+    console.log(inputLastName.value);
+    console.log(inputAge.value);
+  }
+
+ 
+  const button = document.querySelector('button').addEventListener('click', getButton);
+
+
+
+
+
+
+  window.addEventListener('DOMContentLoaded', initForm);
+</script>
